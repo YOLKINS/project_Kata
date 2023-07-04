@@ -1,0 +1,452 @@
+@font-face {
+    font-family: 'TT Lakes Regular';
+    src: url('fonts/TTLakes-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes Medium';
+    src: url('fonts/TTLakes-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes Bold';
+    src: url('fonts/TTLakes-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    background-color: rgba(255, 255, 255, 1);
+    padding: 0;
+    margin: 0;
+
+    /* position: fixed;
+    left: 0; */
+    width: 320px;
+
+    overflow-y: auto;
+
+    font-family: 'TT Lakes Regular', sans-serif;
+
+    box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.20), -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.link {
+    height: 40px;
+    width: 40px;
+}
+
+a {
+    display: inline-block;
+    padding:0;
+    margin:0;
+
+    text-decoration: none;
+}
+/*header*/
+
+.header {
+    display: flex;
+    padding: 0 24px;
+    align-content: center;
+    justify-content: center;
+    
+
+    height: 88px;
+    box-sizing: content-box;
+}
+
+.header__menu_left {
+    display: flex;
+    justify-content: start;
+    align-content: center;
+
+    width: 50%;
+}
+
+.header__menu_right {    
+    display: flex;
+    justify-content: end;
+    align-content: center;
+
+    width: 50%;
+
+}
+
+ .header__menu_left .header__element {
+    margin-right: 16px;
+}
+
+.header__menu_right .header__element {
+    margin-left: 16px;
+} 
+
+.header__element {
+    display:  flex;
+    align-items: center;
+}
+
+/*main*/
+main {
+    flex-grow: 1;
+}
+.container {
+    padding-top: 30px;
+
+    position: relative;
+}
+
+.main-menu__list {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    align-items: flex-start;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.main-menu__element {
+    margin-bottom: 32px;
+    margin-left: 24px;
+}
+
+
+.main-menu__link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.main-menu__link span {
+    color: #1B1C21;
+    font-size: 16px;
+    font-family: 'TT Lakes Medium';
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+}
+
+
+.main-menu__element:first-child > .main-menu__link span{
+    color: #7E7E82;
+}
+
+/*footer*/
+.footer {
+    margin: 0;
+    padding: 0;
+    margin-left: 24px;
+}
+.contacts {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    margin-bottom: 40px; 
+}
+
+.contacts__links {
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.contacts__links > div {
+    margin-right: 16px;
+}
+
+.contacts__mail {
+    margin-bottom: 12px;
+}
+
+.contacts__mail span {
+    color: #1B1C21;
+    font-size: 16px;
+    font-family: 'TT Lakes Medium';
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+}
+
+.contacts__phone-number span {
+    color: #1B1C21;
+    font-size: 24px;
+    font-family: 'TT Lakes Bold';
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+}
+
+.lang {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin-bottom: 32px;
+}
+
+.lang div {
+    margin-right: 8px;
+}
+
+.lang__label {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.lang__radio-input {
+    display: none;
+  }
+
+.lang div label {
+    color: #1B1C21;
+    font-size: 16px;
+    font-family: 'TT Lakes Medium';
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+}
+
+.lang__radio-input:checked + .lang__label {
+    color: #7E7E82;
+}
+
+.main-menu__highlight {
+    position: absolute;
+    left: 0;
+    top:  25px;
+
+    background-image: url('image/highlight-small.svg');
+    background-repeat: no-repeat;
+
+    height: 32px;
+    width: 4px;
+}
+
+/* animation */
+
+@keyframes rotate90 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes rotate15 {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-15deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(15deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes box-shadow {
+    0% {
+        box-shadow: none;
+        border-radius: 50%;
+    }
+
+    100% {
+        box-shadow: 0 0 5px 2px rgba(255, 62, 121, 5);
+        border-radius: 50%;
+    }
+}
+
+.burger-to-close__icon:hover {
+    animation-name: rotate90, box-shadow;
+    animation-duration: 500ms, 500ms;
+    animation-timing-function: ease-out, ease;
+    animation-fill-mode: backwards, forwards;
+    animation-iteration-count: 1, 1;
+} 
+
+.search__icon:hover {
+    animation-name: box-shadow;
+    animation-duration: 500ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1, 1;
+}
+
+
+.link__call {
+    width: 40px;
+    height: 40px;
+
+    position: relative;
+    background-color: rgba(255, 62, 121, 1);
+    border-radius: 50%;
+    
+}
+
+.link__call span {
+    width: 40px;
+    height: 40px;
+
+    display: inline-block;
+
+    background-image: url('image/call-icon.svg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+    transition-property: transform;
+    transition-duration: 1s;
+    transition-delay: 100ms; 
+}
+
+.link__call span:hover {
+    transform: scale(0.85)
+}
+
+.link__call:hover {
+    animation-name: rotate15, box-shadow;
+    animation-timing-function: linear, ease;
+    animation-delay: 100ms, 100ms;
+    animation-duration: 200ms, 500ms;
+    animation-fill-mode: forwards, forwards;
+    animation-iteration-count: 6, 1;
+}
+
+.link__chat {
+    width: 40px;
+    height: 40px;
+
+    position: relative;
+    background-color: rgba(255, 62, 121, 1);
+    border-radius: 50%;
+    
+}
+
+.link__chat span {
+    width: 40px;
+    height: 40px;
+
+    display: inline-block;
+
+
+    background-image: url('image/chat-icon.svg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+    transition-property: transform;
+    transition-duration: 1s;
+    transition-delay: 100ms; 
+}
+
+.link__chat span:hover {
+    transform: scale(0.85)
+}
+
+.link__chat:hover {
+    animation-name: box-shadow;
+    animation-timing-function: ease;
+    animation-delay: 100ms;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.link__profile {
+    width: 40px;
+    height: 40px;
+
+    position: relative;
+    background-color: rgba(255, 62, 121, 1);
+    border-radius: 50%;
+    
+}
+
+.link__profile span {
+    width: 40px;
+    height: 40px;
+
+    display: inline-block;
+
+
+    background-image: url('image/profile-icon.svg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+    transition-property: transform;
+    transition-duration: 1s;
+    transition-delay: 100ms; 
+}
+
+.link__profile span:hover {
+    transform: scale(0.85)
+}
+
+.link__profile:hover {
+    animation-name: box-shadow;
+    animation-timing-function: ease;
+    animation-delay: 100ms;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.link__search {
+    width: 40px;
+    height: 40px;
+
+    position: relative;
+    background-color: rgba(255, 62, 121, 1);
+    border-radius: 50%;
+    
+}
+
+.link__search span {
+    width: 40px;
+    height: 40px;
+
+    display: inline-block;
+
+    background-image: url('image/search-icon.svg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+    transition-property: transform;
+    transition-duration: 1.5s;
+    transition-delay: 100ms; 
+}
+
+.link__search span:hover {
+    transform: translateY(5px) translateX(5px) scale(1.75);
+}
+
+.link__search:hover {
+    animation-name: box-shadow;
+    animation-timing-function: ease;
+    animation-delay: 100ms;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
