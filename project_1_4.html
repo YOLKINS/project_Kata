@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заголовок страницы</title>
+    <link href="styles_1_4.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <section class="header__menu_left">
+            <div class="header__element burger-to-close">
+                <a href="#" class="burger-to-close__icon link">
+                    <image src="image/burger_to_close.svg">
+                </a>                
+            </div>
+            <div class="header__element group">
+                <image src="image/group.svg" alt="logo">
+            </div>            
+        </section>
+        <section class="header__menu_right">
+            <div class="header__element search">
+                <a href="#" class="search__icon link">
+                    <div class="link__search">
+                        <span></span>
+                    </div>
+                </a>                
+            </div>
+        </section>               
+    </header> 
+    <main>
+    <div class="container">
+        <nav class="main-menu">            
+            <ul class="main-menu__list">
+                <li class="main-menu__element">
+                    <a href="#" class="main-menu__link">
+                        <div class="main-menu__highlight"></div>
+                        <span>Ремонт техники</span>
+                    </a>
+                </li>
+                <li class="main-menu__element">
+                    <a href="#" class="main-menu__link">
+                        <span>Услуги и сервисы</span>
+                    </a>
+                </li>
+                <li class="main-menu__element">
+                    <a href="#" class="main-menu__link">
+                        <span>Корпоративным клиентам</span>
+                    </a>
+                </li>
+                <li class="main-menu__element">
+                    <a href="#" class="main-menu__link">
+                        <span>Продавцам техники</span>
+                    </a>
+                </li>
+                <li class="main-menu__element">
+                    <a href="#" class="main-menu__link">
+                        <span>Партнерам</span>
+                    </a>
+                </li>
+                <li class="main-menu__element">
+                    <a href="#" class="main-menu__link">
+                        <span>Производителям</span>
+                    </a>
+                </li>
+                <li class="main-menu__element">
+                    <a href="#" class="main-menu__link">
+                        <span>Наши сервисные центры</span>
+                    </a>
+                </li>
+                <li class="main-menu__element">
+                    <a href="#" class="main-menu__link">
+                        <span>Контакты</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    </main>
+    <footer class="footer">
+        <section class="contacts">
+            <div class="contacts__links">
+                <div class="contacts__call call">
+                    <a href="#" class="contacts__call_icon link">
+                        <div class="link__call">
+                            <span></span>
+                        </div>
+                    </a>  
+                </div>
+                <div class="contacts__chat">
+                    <a href="#" class="contacts__chat_icon link">
+                        <div class="link__chat">
+                            <span></span>
+                        </div>
+                    </a> 
+                </div>
+                <div class="contacts__profile">
+                    <a href="#" class="contacts__profile_icon link">
+                        <div class="link__profile">
+                            <span></span>
+                        </div>
+                    </a> 
+                </div>
+            </div>
+            <div class="contacts__mail">
+                <span>mail@cps.com</span>
+            </div>
+            <div class="contacts__phone-number">
+                <span>8 800 890 8900</span>
+            </div>
+        </section>
+        <section class="lang">
+            <div class="lang__ru">
+                <input type="radio" name="lang" id="lang__ru" value="ru" class="lang__radio-input" checked>
+                <label for="lang__ru" class="lang__label">RU</label>
+            </div>
+            <div class="lang__en">
+                <input type="radio" name="lang" id="lang__en" value="en" class="lang__radio-input">
+                <label for="lang__en" class="lang__label">EN</label>
+            </div>
+            <div class="lang__ch">
+                <input type="radio" name="lang" id="lang__ch" value="ch" class="lang__radio-input">
+                <label for="lang__ch" class="lang__label">CH</label>
+            </div>
+        </section>
+    </footer>    
+</body>
+</html>
