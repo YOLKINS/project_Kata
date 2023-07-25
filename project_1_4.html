@@ -7,24 +7,23 @@
     <link href="styles_1_4.css" rel="stylesheet">
 </head>
 <body>
+<div class="sidebar">
     <header class="header">
         <section class="header__menu_left">
             <div class="header__element burger-to-close">
-                <a href="#" class="burger-to-close__icon link">
-                    <image src="image/burger_to_close.svg">
-                </a>                
+                <button class="button-pink">
+                    <img src="image/burger_to_close-icon.svg" alt="burger" class="button-pink__icon link__burger-to-close">
+                </buttin>                
             </div>
             <div class="header__element group">
-                <image src="image/group.svg" alt="logo">
+                <img src="image/group.svg" alt="logo">
             </div>            
         </section>
         <section class="header__menu_right">
-            <div class="header__element search">
-                <a href="#" class="search__icon link">
-                    <div class="link__search">
-                        <span></span>
-                    </div>
-                </a>                
+            <div class="header__element">
+                <button class="button-pink search__icon">
+                    <img src="image/search-icon.svg" alt="search" class="button-pink__icon link__search">
+                </button>                
             </div>
         </section>               
     </header> 
@@ -35,42 +34,42 @@
                 <li class="main-menu__element">
                     <a href="#" class="main-menu__link">
                         <div class="main-menu__highlight"></div>
-                        <span>Ремонт техники</span>
+                        <span class="main-menu__text">Ремонт техники</span>
                     </a>
                 </li>
                 <li class="main-menu__element">
                     <a href="#" class="main-menu__link">
-                        <span>Услуги и сервисы</span>
+                        <span class="main-menu__text">Услуги и сервисы</span>
                     </a>
                 </li>
                 <li class="main-menu__element">
                     <a href="#" class="main-menu__link">
-                        <span>Корпоративным клиентам</span>
+                        <span class="main-menu__text">Корпоративным клиентам</span>
                     </a>
                 </li>
                 <li class="main-menu__element">
                     <a href="#" class="main-menu__link">
-                        <span>Продавцам техники</span>
+                        <span class="main-menu__text">Продавцам техники</span>
                     </a>
                 </li>
                 <li class="main-menu__element">
                     <a href="#" class="main-menu__link">
-                        <span>Партнерам</span>
+                        <span class="main-menu__text">Партнерам</span>
                     </a>
                 </li>
                 <li class="main-menu__element">
                     <a href="#" class="main-menu__link">
-                        <span>Производителям</span>
+                        <span class="main-menu__text">Производителям</span>
                     </a>
                 </li>
                 <li class="main-menu__element">
                     <a href="#" class="main-menu__link">
-                        <span>Наши сервисные центры</span>
+                        <span class="main-menu__text">Наши сервисные центры</span>
                     </a>
                 </li>
                 <li class="main-menu__element">
                     <a href="#" class="main-menu__link">
-                        <span>Контакты</span>
+                        <span class="main-menu__text">Контакты</span>
                     </a>
                 </li>
             </ul>
@@ -80,33 +79,27 @@
     <footer class="footer">
         <section class="contacts">
             <div class="contacts__links">
-                <div class="contacts__call call">
-                    <a href="#" class="contacts__call_icon link">
-                        <div class="link__call">
-                            <span></span>
-                        </div>
-                    </a>  
+                <div class="contacts__call">
+                    <button class="button-pink">
+                        <img src="image/call-icon.svg" alt="chat" class="button-pink__icon link__call">
+                    </button>  
                 </div>
                 <div class="contacts__chat">
-                    <a href="#" class="contacts__chat_icon link">
-                        <div class="link__chat">
-                            <span></span>
-                        </div>
-                    </a> 
+                    <button class="button-pink">
+                        <img src="image/chat-icon.svg" alt="chat" class="button-pink__icon link__chat">
+                    </button> 
                 </div>
                 <div class="contacts__profile">
-                    <a href="#" class="contacts__profile_icon link">
-                        <div class="link__profile">
-                            <span></span>
-                        </div>
-                    </a> 
+                    <button class="button-pink">
+                        <img src="image/profile-icon.svg" alt="profile" class="button-pink__icon link__profile">
+                    </button> 
                 </div>
             </div>
             <div class="contacts__mail">
-                <span>mail@cps.com</span>
+                <a class="contacts__mail_text" href="mailto:mail@cps.com">mail@cps.com</a>
             </div>
             <div class="contacts__phone-number">
-                <span>8 800 890 8900</span>
+                <a class="contacts__phone-number_text" href="tel:88008908900">8 800 890 8900</a>
             </div>
         </section>
         <section class="lang">
@@ -124,5 +117,6 @@
             </div>
         </section>
     </footer>    
+</div>
 </body>
 </html>

@@ -20,17 +20,28 @@
 }
 
 body {
+    padding: 0;
+    margin: 0;
+    position: relative;
+
+    overflow: hidden;
+}
+
+.sidebar {
+
     background-color: rgba(255, 255, 255, 1);
     padding: 0;
     margin: 0;
 
-    /* position: fixed;
-    left: 0; */
+    position: fixed;
+    left: 0;
+    top: 0;
     width: 320px;
+    height: 100%;
 
     overflow-y: auto;
 
-    font-family: 'TT Lakes Regular', sans-serif;
+    font-family: 'TT Lakes Medium', sans-serif;
 
     box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.20), -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
 
@@ -39,9 +50,22 @@ body {
 
 }
 
-.link {
-    height: 40px;
-    width: 40px;
+.button-pink {
+  appearance: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 62, 121, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-pink__icon {
+
 }
 
 a {
@@ -51,32 +75,33 @@ a {
 
     text-decoration: none;
 }
+
 /*header*/
 
 .header {
     display: flex;
     padding: 0 24px;
-    align-content: center;
+    align-items: center;
     justify-content: center;
     
 
     height: 88px;
-    box-sizing: content-box;
+    /* box-sizing: content-box; */
 }
 
 .header__menu_left {
     display: flex;
     justify-content: start;
-    align-content: center;
-
+    align-items: center;
+    height: 88px;
     width: 50%;
 }
 
 .header__menu_right {    
     display: flex;
     justify-content: end;
-    align-content: center;
-
+    align-items: center;
+    height: 88px;
     width: 50%;
 
 }
@@ -128,12 +153,9 @@ main {
     color: inherit;
 }
 
-.main-menu__link span {
+.main-menu__text {
     color: #1B1C21;
     font-size: 16px;
-    font-family: 'TT Lakes Medium';
-    font-style: normal;
-    font-weight: 500;
     line-height: 24px;
     letter-spacing: -0.2px;
 }
@@ -172,24 +194,25 @@ main {
     margin-bottom: 12px;
 }
 
-.contacts__mail span {
+.contacts__mail_text {
     color: #1B1C21;
     font-size: 16px;
-    font-family: 'TT Lakes Medium';
-    font-style: normal;
-    font-weight: 500;
     line-height: 24px;
     letter-spacing: -0.2px;
+
+    text-decoration: none;
 }
 
-.contacts__phone-number span {
+.contacts__phone-number_text {
     color: #1B1C21;
     font-size: 24px;
-    font-family: 'TT Lakes Bold';
+    font-family: 'TT Lakes Bold', sans-serif;
     font-style: normal;
     font-weight: 700;
     line-height: 32px;
     letter-spacing: -0.6px;
+
+    text-decoration: none;
 }
 
 .lang {
@@ -216,9 +239,6 @@ main {
 .lang div label {
     color: #1B1C21;
     font-size: 16px;
-    font-family: 'TT Lakes Medium';
-    font-style: normal;
-    font-weight: 500;
     line-height: 24px;
     letter-spacing: -0.2px;
 }
@@ -280,173 +300,44 @@ main {
     }
 }
 
-.burger-to-close__icon:hover {
-    animation-name: rotate90, box-shadow;
-    animation-duration: 500ms, 500ms;
-    animation-timing-function: ease-out, ease;
-    animation-fill-mode: backwards, forwards;
-    animation-iteration-count: 1, 1;
+.link__burger-to-close:hover {
+    animation-name: rotate90;
+    animation-duration: 500ms;
+    animation-timing-function: ease-out;
+    animation-fill-mode: backwards;
+    animation-iteration-count: 1;
 } 
 
-.search__icon:hover {
-    animation-name: box-shadow;
-    animation-duration: 500ms;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1, 1;
-}
-
-
-.link__call {
-    width: 40px;
-    height: 40px;
-
-    position: relative;
-    background-color: rgba(255, 62, 121, 1);
-    border-radius: 50%;
-    
-}
-
-.link__call span {
-    width: 40px;
-    height: 40px;
-
-    display: inline-block;
-
-    background-image: url('image/call-icon.svg');
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-
-    transition-property: transform;
-    transition-duration: 1s;
-    transition-delay: 100ms; 
-}
-
-.link__call span:hover {
-    transform: scale(0.85)
-}
-
 .link__call:hover {
-    animation-name: rotate15, box-shadow;
-    animation-timing-function: linear, ease;
-    animation-delay: 100ms, 100ms;
-    animation-duration: 200ms, 500ms;
-    animation-fill-mode: forwards, forwards;
-    animation-iteration-count: 6, 1;
-}
 
-.link__chat {
-    width: 40px;
-    height: 40px;
-
-    position: relative;
-    background-color: rgba(255, 62, 121, 1);
-    border-radius: 50%;
-    
-}
-
-.link__chat span {
-    width: 40px;
-    height: 40px;
-
-    display: inline-block;
-
-
-    background-image: url('image/chat-icon.svg');
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-
-    transition-property: transform;
-    transition-duration: 1s;
-    transition-delay: 100ms; 
-}
-
-.link__chat span:hover {
-    transform: scale(0.85)
-}
-
-.link__chat:hover {
-    animation-name: box-shadow;
-    animation-timing-function: ease;
+    animation-name: rotate15;
+    animation-timing-function: linear;
     animation-delay: 100ms;
-    animation-duration: 500ms;
+    animation-duration: 200ms;
     animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-}
-
-.link__profile {
-    width: 40px;
-    height: 40px;
-
-    position: relative;
-    background-color: rgba(255, 62, 121, 1);
-    border-radius: 50%;
-    
-}
-
-.link__profile span {
-    width: 40px;
-    height: 40px;
-
-    display: inline-block;
-
-
-    background-image: url('image/profile-icon.svg');
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-
-    transition-property: transform;
-    transition-duration: 1s;
-    transition-delay: 100ms; 
-}
-
-.link__profile span:hover {
-    transform: scale(0.85)
-}
-
-.link__profile:hover {
-    animation-name: box-shadow;
-    animation-timing-function: ease;
-    animation-delay: 100ms;
-    animation-duration: 500ms;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-}
-
-.link__search {
-    width: 40px;
-    height: 40px;
-
-    position: relative;
-    background-color: rgba(255, 62, 121, 1);
-    border-radius: 50%;
-    
-}
-
-.link__search span {
-    width: 40px;
-    height: 40px;
-
-    display: inline-block;
-
-    background-image: url('image/search-icon.svg');
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-
-    transition-property: transform;
-    transition-duration: 1.5s;
-    transition-delay: 100ms; 
-}
-
-.link__search span:hover {
-    transform: translateY(5px) translateX(5px) scale(1.75);
+    animation-iteration-count: 6;
 }
 
 .link__search:hover {
+    transform: translateY(5px) translateX(5px) scale(1.75);
+}
+
+.button-pink:hover {
     animation-name: box-shadow;
     animation-timing-function: ease;
-    animation-delay: 100ms;
-    animation-duration: 300ms;
+    animation-delay: 200ms;
+    animation-duration: 400ms;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
+}
+
+.button-pink__icon {
+
+    transition-property: transform;
+    transition-duration: 1.5s;
+    transition-delay: 100ms;
+}
+
+.contacts__links .button-pink__icon:hover {
+    transform: scale(0.80)
 }
