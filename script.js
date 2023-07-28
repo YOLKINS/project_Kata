@@ -75,12 +75,12 @@ class CardUtils {
             this.displayAll(this.cards);
             this.btnText.textContent = 'Скрыть';
             this.btnArrow.classList.add('active');
-            this._setOpen();
+            this.setOpen();
             return;
         }
 
         if (this.config.isOpen === true) {
-            this._setClose();
+            this.setClose();
             this.triggerResize();
             this.btnText.textContent = 'Показать все';
             this.btnArrow.classList.remove('active');
@@ -100,11 +100,11 @@ class CardUtils {
         }
     }
 
-    _setOpen() {
+    setOpen() {
         this.config.isOpen = true;
     }
 
-    _setClose() {
+    setClose() {
         this.config.isOpen = false;
     }
 
