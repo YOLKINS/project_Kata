@@ -107,7 +107,7 @@ body {
     display: inline-block;
 }
 
-button {
+.btn {
     display: flex;
     align-items: center;
 
@@ -115,6 +115,8 @@ button {
     background: none;
     border: none;
     outline: none;
+
+    cursor: pointer;
 }
 
 .btn__arrow {
